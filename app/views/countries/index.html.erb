@@ -1,0 +1,11 @@
+<h3>List of available Countries.</h3>
+<a href = "/countries/new" >Add New</a>
+<% @countries.each do |country|%>
+  <h2>ID : <%=country.id%></h2>
+  <h3>Country Name : <%=country.name%> </h3>
+  <h3>Capital City : <%=country.capital_city%></h3>
+  <h3>Country's Population : <%=country.population%></h3>
+  <%=link_to "Show Data", country_path(country.id) %>
+ 
+  <br>
+<% end %>

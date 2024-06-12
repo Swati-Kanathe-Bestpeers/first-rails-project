@@ -1,0 +1,8 @@
+<h1>This is the data for the following country id </h1>
+<h3>Your ID : <%=@country.id%> </h3>
+<h3>Country Name : <%= @country.name %> </h3>
+<h3>Capital City : <%= @country.capital_city %></h3>
+<h3>Country's Population : <%= @country.population %></h3>
+<a href = "/countries/<%= @country.id %>/edit" >Edit Your Data</a>
+<br><br><br>
+<%= button_to "Delete #{@country.name}",@country, method: "delete" %>
