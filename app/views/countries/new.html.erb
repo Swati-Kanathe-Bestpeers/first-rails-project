@@ -1,10 +1,14 @@
 <h3>Add a Country.</h3>
 <%=form_with model: (@country) do |c|%>
   <%=c.label :name, "Country Name" %>
-  <%=c.text_field :name %>
+  <%=c.text_field :name %> 
+  <br> <br>
+  <%=c.label :name, "Confirm Country Name" %>
+  <%=c.text_field :name_confirmation %>
   <br> <br>
   <%=c.label :capital_city, "Capital City" %>
   <%=c.text_field :capital_city %>
+  
   <br> <br>
   <%=c.label :population, "Population" %>
   <%=c.text_field :population %>

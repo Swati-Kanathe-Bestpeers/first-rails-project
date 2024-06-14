@@ -1,7 +1,11 @@
 <h2> You Can Edit Your Information.</h2>
+
 <%=form_for (@country) do |c| %>
   <%=c.label :name, "Country Name" %>
   <%=c.text_field :name %>
+  <br> <br>
+  <%=c.label :name, "Confirm Country Name" %>
+  <%=c.text_field :name_confirmation %>
   <br> <br>
   <%=c.label :capital_city, "Capital City" %>
   <%=c.text_field :capital_city %>

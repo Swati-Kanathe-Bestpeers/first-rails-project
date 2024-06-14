@@ -8,13 +8,12 @@ class CountriesController < ApplicationController
   end
   def create
     @country = Country.new(param_country)
-    # Country.new(param_country)
     if @country.save
       flash[:notice] = "Data created successfully!"
       redirect_to countries_path
     else 
       render 'new'
-     end
+    end
   end
   def show
     @country = Country.find(params[:id])

@@ -1,11 +1,8 @@
 class Country < ApplicationRecord
-  def change 
-    create_tabel :country  do |c|
-      c.string :name
-      c.string :city
-      c.integer :population
-
-      c.timestamps
-    end
-  end
+  validates :name,uniqueness: true, acceptance: { message: 'must be abided' } 
+  
+  validates :capital_city , uniqueness: true, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }
+  validates :population, length: { in: 6..12 }
+  validates :name, confirmation: true
+  validates :name_confirmation, presence: true
 end
